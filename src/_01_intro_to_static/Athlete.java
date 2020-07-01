@@ -12,30 +12,32 @@ public class Athlete {
 	Athlete(String name, int speed) {
 		this.name = name;
 		this.speed = speed;
-		bibNumber= nextBibNumber++;
+		bibNumber = nextBibNumber += 3;
+	}
+
+	public void print() {
+
+		System.out.println(name);
+
+		System.out.println("Speed:" + speed);
+
+		System.out.println(bibNumber);
 	}
 
 	public static void main(String[] args) {
-		// create two athletes
+		// create 2 athletes
 		// print their names, bibNumbers, and the location of their race.
+
+		Athlete athlete1 = new Athlete("Jason", 21);
+
+		Athlete athlete2 = new Athlete("Jason2", 22);
+
+		Athlete athlete3 = new Athlete("Jason3", 30);
+
+		athlete1.print();
 		
-		Athlete athlete1= new Athlete("Jason", 21);
+		athlete2.print();
 		
-		Athlete athlete2= new Athlete("Jason2", 22);
-		
-		System.out.println(athlete1.name);
-		
-		System.out.println(athlete1.bibNumber);
-		
-		System.out.println(raceLocation);
-		
-		System.out.println(athlete2.name);
-		
-		System.out.println(athlete2.bibNumber);
-		
-		System.out.println(raceLocation);
-		
-		
-		
+		athlete3.print();
 	}
 }
