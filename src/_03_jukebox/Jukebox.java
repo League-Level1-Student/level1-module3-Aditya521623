@@ -25,12 +25,12 @@ import javazoom.jl.player.advanced.AdvancedPlayer;
  *   Right click your project and add it as a JAR (Under Java Build Path > Libraries).*/
 
 public class Jukebox implements Runnable, MouseListener {
+	
+	Song drums = new Song("drums.mp3");
 
-	Song drums = new Song("drums.wav");
+	Song guitar = new Song("guitar.mp3");
 
-	Song guitar = new Song("guitar.wav");
-
-	Song piano = new Song("piano.wav");
+	Song piano = new Song("piano.mp3");
 
 	JButton button = new JButton("drums");
 
@@ -41,12 +41,14 @@ public class Jukebox implements Runnable, MouseListener {
 	public void mouseClicked(MouseEvent e) {
 		JButton mouseClicked = (JButton) e.getSource();
 
+		System.out.println("Mouse clicked");
+		
 		if (mouseClicked.equals(button)) {
 			drums.play();
 		} else if (mouseClicked.equals(button2)) {
 			guitar.play();
 		} else {
-piano.play();
+		piano.play();
 		}
 	}
 
@@ -74,6 +76,12 @@ piano.play();
 		frame.pack();
 
 		button.addMouseListener(this);
+		
+		button2.addMouseListener(this);
+		
+		button3.addMouseListener(this);
+		
+		
 
 		/*
 		 * 4. Create a user interface for your Jukebox so that the user can to choose
