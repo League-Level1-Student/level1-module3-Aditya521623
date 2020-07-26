@@ -22,11 +22,6 @@ public class movieThing {
 		
 		System.out.println("the best movie is: " + nq1.getBestMovie());
 		System.out.println("the second best movie is: " + nq1.getSecondBestMovie());
-		
-		
-		
-		
-	
 
 	}
 
